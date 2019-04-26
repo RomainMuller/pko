@@ -6,4 +6,5 @@
 .*
 
 # Don't package coverage data
+/.nyc_output
 /coverage

@@ -60,8 +60,7 @@
   "jest": {
     "collectCoverage": true,
     "coverageReporters": [
-      "html",
-      "lcov",
+      "lcovonly",
       "text-summary"
     ],
     "coverageThreshold": {},

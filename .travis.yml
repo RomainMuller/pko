@@ -20,8 +20,9 @@ script:
 - npm run build
 - npm test
 after_script:
-- /tmp/cc-test-reporter format-coverage --input-type lcov --output coverage/codeclimate.bin coverage/lcov.info
-- /tmp/cc-test-reporter upload-coverage --input coverage/codeclimate.bin
+- find coverage -name lcov.info | xargs -n 1 -I '{}' /tmp/cc-test-reporter format-coverage --input-type lcov -o '{}'.cc '{}'
+- /tmp/cc-test-reporter sum-coverage --parts $(find coverage -name lcov.info.cc | wc -l) $(find coverage -name lcov.info.cc)
+- /tmp/cc-test-reporter upload-coverage
 - /tmp/cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 - greenkeeper-lockfile-upload
 

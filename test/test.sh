@@ -32,10 +32,17 @@ install_prefix=${dir}/install/usr
     cd ${install_prefix}
     # Hopping thorugh `npm pack` to avoid `npm`'s local symlinking, that would interfere with install-relative discover
     tarball=$(npm pack --ignore-scripts ${ROOT})
-    npm install --global-style --no-save ${tarball}
+    npm install --global-style --no-save ${tarball} nyc source-map-support ts-node @istanbuljs/nyc-config-typescript
     ln -s node_modules/.bin bin
 )
-PKO=${install_prefix}/bin/pko
+
+COVERAGE_ROOT="${ROOT}/coverage/integ"
+
+NYC="${install_prefix}/bin/nyc --reporter=lcovonly --cwd=${ROOT}"
+PKO="${install_prefix}/bin/pko"
+
+echo '{ "extends": "@istanbuljs/nyc-config-typescript", "all": true }' > ${dir}/.nycrc
+
 
 mkdir -p ${dir}/install/.pko/install-relative
 echo '{"name": "install-relative", "versions": { "1.0.0": {} }}' \
@@ -62,8 +69,8 @@ export PKO_NO_COLOR=1 # Disable colored output
     title="Correctly uses install-relative repository: "
     cd ${dir}
     expected="install-relative@1.0.0"
-    actual=$(${PKO} ls-overrides)
-    if [ ${expected} == ${actual} ]; then
+    actual=$(${NYC} --report-dir=${COVERAGE_ROOT}/$(echo $title | base64) ${PKO} ls-overrides)
+    if [ "${expected}" == "${actual}" ]; then
         echo "✅ ${title}"
     else
         echo "❌ ${title}"
@@ -77,7 +84,7 @@ export PKO_NO_COLOR=1 # Disable colored output
     title="Correctly uses \$PWD-relative repository (current directory)"
     cd ${dir}/cwd
     expected="cwd-relative@1.0.0"
-    actual=$(${PKO} ls-overrides)
+    actual=$(${NYC} --report-dir=${COVERAGE_ROOT}/$(echo $title | base64) ${PKO} ls-overrides)
     if [ ${expected} == ${actual} ]; then
         echo "✅ ${title}"
     else
@@ -92,7 +99,7 @@ export PKO_NO_COLOR=1 # Disable colored output
     title="Correctly uses \$PWD-relative repository (parent directory)"
     cd ${dir}/cwd/sub
     expected="cwd-relative@1.0.0"
-    actual=$(${PKO} ls-overrides)
+    actual=$(${NYC} --report-dir=${COVERAGE_ROOT}/$(echo $title | base64) ${PKO} ls-overrides)
     if [ ${expected} == ${actual} ]; then
         echo "✅ ${title}"
     else
@@ -107,7 +114,7 @@ export PKO_NO_COLOR=1 # Disable colored output
     title="Correctly uses environment-configured repository"
     cd ${dir}
     expected="env@1.0.0"
-    actual=$(PKO_REPOSITORY=${dir}/env/repository ${PKO} ls-overrides)
+    actual=$(PKO_REPOSITORY=${dir}/env/repository ${NYC} --report-dir=${COVERAGE_ROOT}/$(echo $title | base64) ${PKO} ls-overrides)
     if [ ${expected} == ${actual} ]; then
         echo "✅ ${title}"
     else
@@ -124,8 +131,8 @@ export PKO_NO_COLOR=1 # Disable colored output
     version=$(node -e "console.log(require('${ROOT}/package.json').version);")
     NL=$'\n'
     expected="install-relative@1.0.0${NL}pko@${version}"
-    ${PKO} publish ${install_prefix}/pko-*.tgz
-    actual=$(${PKO} ls-overrides)
+    ${NYC} --report-dir=${COVERAGE_ROOT}/$(echo $title | base64)-1 ${PKO} publish ${install_prefix}/pko-*.tgz
+    actual=$(${NYC} --report-dir=${COVERAGE_ROOT}/$(echo $title | base64)-2 ${PKO} ls-overrides)
     if [ "${expected}" == "${actual}" ]; then
         echo "✅ ${title}"
     else
@@ -135,5 +142,6 @@ export PKO_NO_COLOR=1 # Disable colored output
         exit_code=1
     fi
 )
+
 
 exit ${exit_code}

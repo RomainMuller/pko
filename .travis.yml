@@ -1,14 +1,22 @@
----
 language: node_js
-node_js: ['8']
+node_js:
+- '8'
 cache: npm
 before_install:
-  - npm install -g npm@^6.9.0
-  - npm install -g greenkeeper-lockfile
+- npm install -g npm@^6.9.0
+- npm install -g greenkeeper-lockfile
 before_script:
-  - greenkeeper-lockfile-update
+- greenkeeper-lockfile-update
 script:
-  - npm run build
-  - npm test
+- npm run build
+- npm test
 after_script:
-  - greenkeeper-lockfile-upload
+- greenkeeper-lockfile-upload
+deploy:
+  provider: npm
+  email: romain.muller@telecomnancy.net
+  api_key:
+    secure: XKj295k/Ofjuql+W4B02JuSGL8ICNhYz8I3qQV0y24Xp+CKsnUjjcAdPysgMjtZFpvFqN37UifTjo7mLOGryzijg7vazj8eBAnJrTsT6MSUcy+YG3ulMHBMHLR7rZsY1xUvVpixNvLlYNcNfbJf0ET0qNrOc8eyy4XLO2kcEGwuZcjQsg3tkxgVXCR41mKiC7QWV5StdFgSmC50WK2x03wOAKWA3PAI3kqTz+a6QUErVHMDLdSnbQ2vNc4OYl4lJejw8ulctCRBvS+vtOKYHrCkmKdGXqo/OydJRlpJM0GawAyvj8E6cmL+s8JiOHQ8stf5cQbBgFOA1ZvD/x2wUS2FJR5EoPX6z4R6XUxZKu3NsA+x9dxDdENo/W9hHRtDY5jQ/GwZ+rvq7zu+jnZWhtqsWIRvFGaB++oQmJlPJyZSp0TzbioXzoTU+hVRoakO+mnpdX0JhbaZeyXxR4YWAAAPa4k8iRj5RyqabvO7NBI87gBOH4CgqynqEPpDGlYzHRRxbROkmm0rmQTgNsC/8N3qVkeHdRmFDgpCawbTuh/+CKOeWaqDrSuS2TNnxgQJYF0JjT4zaCr7QVO4Kh+87y64VilMJJuZfoI2yhISPmZkE/1EOWdbJR2oa46oyZ2dT9wOZriYzrBZAz/k5Rtog0hguk4ETqRIiEk8iTC7jLis=
+  on:
+    tags: true
+    repo: RomainMuller/pko

@@ -1,2 +1,6 @@
+# TypeScript source shouldn't be packaged
 *.ts
 !*.d.ts
+
+# Don't package dot-files
+.*

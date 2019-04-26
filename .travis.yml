@@ -2,6 +2,13 @@
 language: node_js
 node_js: ['8']
 cache: npm
+before_install:
+  - npm install -g npm@^6.9.0
+  - npm install -g greenkeeper-lockfile
+before_script:
+  - greenkeeper-lockfile-update
 script:
   - npm run build
   - npm test
+after_script:
+  - greenkeeper-lockfile-upload

@@ -1,4 +1,7 @@
 # `pko`
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/RomainMuller/pko.svg)](https://greenkeeper.io/)
+
 `pko` is a drop-in replacement for `npm` that uses local files instead of the standard `npm` registry for the packages
 it has been set up with. If you're wondering why you would want to do such things, refer to the [use-cases](#Use-cases)
 section of this document.

@@ -1,5 +1,6 @@
 # `pko` - Package Overlay
 [![Build Status](https://travis-ci.com/RomainMuller/pko.svg?branch=master)](https://travis-ci.com/RomainMuller/pko)
+[![Coveralls](https://img.shields.io/coveralls/github/RomainMuller/pko/master.svg)](https://coveralls.io)
 [![Greenkeeper badge](https://badges.greenkeeper.io/RomainMuller/pko.svg)](https://greenkeeper.io/)
 [![npm package](https://img.shields.io/npm/v/pko/latest.svg)](https://www.npmjs.com/package/pko)
 

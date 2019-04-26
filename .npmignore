@@ -4,3 +4,6 @@
 
 # Don't package dot-files
 .*
+
+# Don't package coverage data
+/coverage

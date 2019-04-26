@@ -32,7 +32,8 @@ install_prefix=${dir}/install/usr
     cd ${install_prefix}
     # Hopping thorugh `npm pack` to avoid `npm`'s local symlinking, that would interfere with install-relative discover
     tarball=$(npm pack --ignore-scripts ${ROOT})
-    npm install --global-style --no-save ${tarball} nyc source-map-support ts-node @istanbuljs/nyc-config-typescript
+    npm install --no-save @istanbuljs/nyc-config-typescript nyc source-map-support ts-node typescript
+    npm install --global-style --no-save ${tarball}
     ln -s node_modules/.bin bin
 )
 

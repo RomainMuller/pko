@@ -13,6 +13,7 @@ script:
 after_script:
 - greenkeeper-lockfile-upload
 deploy:
+  skip_cleanup: true
   provider: npm
   email: romain.muller@telecomnancy.net
   api_key:

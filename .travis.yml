@@ -9,21 +9,20 @@ env:
 
 before_install:
 - npm install -g npm@^6.9.0
-- npm install -g coveralls greenkeeper-lockfile
+- npm install -g greenkeeper-lockfile
+- curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 -o /tmp/cc-test-reporter
+- chmod +x /tmp/cc-test-reporter
 
 before_script:
-- curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 -o ./cc-test-reporter
-- chmod +x ./cc-test-reporter
 - greenkeeper-lockfile-update
-- ./cc-test-reporter before-build
+- /tmp/cc-test-reporter before-build
 script:
 - npm run build
 - npm test
 after_script:
-- coveralls < coverage/lcov.info
-- ./cc-test-reporter format-coverage --input-type lcov --output coverage/codeclimate.bin coverage/lcov.info
-- ./cc-test-reporter upload-coverage --input coverage/codeclimate.bin
-- ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+- /tmp/cc-test-reporter format-coverage --input-type lcov --output coverage/codeclimate.bin coverage/lcov.info
+- /tmp/cc-test-reporter upload-coverage --input coverage/codeclimate.bin
+- /tmp/cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 - greenkeeper-lockfile-upload
 
 deploy:

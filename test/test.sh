@@ -67,10 +67,10 @@ exit_code=0
 export PKO_NO_COLOR=1 # Disable colored output
 
 (
-    title="Correctly uses install-relative repository: "
+    title="Correctly uses install-relative repository"
     cd ${dir}
     expected="install-relative@1.0.0"
-    actual=$(${NYC} --report-dir=${COVERAGE_ROOT}/$(echo $title | base64) ${PKO} ls-overrides)
+    actual=$(${NYC} --report-dir=${COVERAGE_ROOT}/$(echo $title | sed -e 's/[^A-Za-z0-9_-]/_/g') ${PKO} ls-overrides)
     if [ "${expected}" == "${actual}" ]; then
         echo "✅ ${title}"
     else
@@ -85,7 +85,7 @@ export PKO_NO_COLOR=1 # Disable colored output
     title="Correctly uses \$PWD-relative repository (current directory)"
     cd ${dir}/cwd
     expected="cwd-relative@1.0.0"
-    actual=$(${NYC} --report-dir=${COVERAGE_ROOT}/$(echo $title | base64) ${PKO} ls-overrides)
+    actual=$(${NYC} --report-dir=${COVERAGE_ROOT}/$(echo $title | sed -e 's/[^A-Za-z0-9_-]/_/g') ${PKO} ls-overrides)
     if [ ${expected} == ${actual} ]; then
         echo "✅ ${title}"
     else
@@ -100,7 +100,7 @@ export PKO_NO_COLOR=1 # Disable colored output
     title="Correctly uses \$PWD-relative repository (parent directory)"
     cd ${dir}/cwd/sub
     expected="cwd-relative@1.0.0"
-    actual=$(${NYC} --report-dir=${COVERAGE_ROOT}/$(echo $title | base64) ${PKO} ls-overrides)
+    actual=$(${NYC} --report-dir=${COVERAGE_ROOT}/$(echo $title | sed -e 's/[^A-Za-z0-9_-]/_/g') ${PKO} ls-overrides)
     if [ ${expected} == ${actual} ]; then
         echo "✅ ${title}"
     else
@@ -115,7 +115,7 @@ export PKO_NO_COLOR=1 # Disable colored output
     title="Correctly uses environment-configured repository"
     cd ${dir}
     expected="env@1.0.0"
-    actual=$(PKO_REPOSITORY=${dir}/env/repository ${NYC} --report-dir=${COVERAGE_ROOT}/$(echo $title | base64) ${PKO} ls-overrides)
+    actual=$(PKO_REPOSITORY=${dir}/env/repository ${NYC} --report-dir=${COVERAGE_ROOT}/$(echo $title | sed -e 's/[^A-Za-z0-9_-]/_/g') ${PKO} ls-overrides)
     if [ ${expected} == ${actual} ]; then
         echo "✅ ${title}"
     else
@@ -132,8 +132,8 @@ export PKO_NO_COLOR=1 # Disable colored output
     version=$(node -e "console.log(require('${ROOT}/package.json').version);")
     NL=$'\n'
     expected="install-relative@1.0.0${NL}pko@${version}"
-    ${NYC} --report-dir=${COVERAGE_ROOT}/$(echo $title | base64)-1 ${PKO} publish ${install_prefix}/pko-*.tgz
-    actual=$(${NYC} --report-dir=${COVERAGE_ROOT}/$(echo $title | base64)-2 ${PKO} ls-overrides)
+    ${NYC} --report-dir=${COVERAGE_ROOT}/$(echo $title | sed -e 's/[^A-Za-z0-9_-]/_/g')-1 ${PKO} publish ${install_prefix}/pko-*.tgz
+    actual=$(${NYC} --report-dir=${COVERAGE_ROOT}/$(echo $title | sed -e 's/[^A-Za-z0-9_-]/_/g')-2 ${PKO} ls-overrides)
     if [ "${expected}" == "${actual}" ]; then
         echo "✅ ${title}"
     else
@@ -143,6 +143,5 @@ export PKO_NO_COLOR=1 # Disable colored output
         exit_code=1
     fi
 )
-
 
 exit ${exit_code}

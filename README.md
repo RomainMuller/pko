@@ -1,7 +1,8 @@
 # `pko` - Package Overlay
 [![Build Status](https://travis-ci.com/RomainMuller/pko.svg?branch=master)](https://travis-ci.com/RomainMuller/pko)
-[![Coverage Status](https://coveralls.io/repos/github/RomainMuller/pko/badge.svg?branch=master)](https://coveralls.io/github/RomainMuller/pko?branch=master)
-[![Greenkeeper badge](https://badges.greenkeeper.io/RomainMuller/pko.svg)](https://greenkeeper.io/)
+[![Maintainability](https://api.codeclimate.com/v1/badges/0dd9c68d88c6d6a7c672/maintainability)](https://codeclimate.com/github/RomainMuller/pko/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/0dd9c68d88c6d6a7c672/test_coverage)](https://codeclimate.com/github/RomainMuller/pko/test_coverage)
+[![Greenkeeper](https://badges.greenkeeper.io/RomainMuller/pko.svg)](https://greenkeeper.io/)
 [![npm package](https://img.shields.io/npm/v/pko/latest.svg)](https://www.npmjs.com/package/pko)
 
 `pko` is a drop-in replacement for `npm` that uses local files instead of the standard `npm` registry for the packages

@@ -1,4 +1,7 @@
-# `pko`
+# `pko` - Package Overlay
+[![Build Status](https://travis-ci.com/RomainMuller/pko.svg?branch=master)](https://travis-ci.com/RomainMuller/pko)
+[![npm package](https://img.shields.io/npm/v/pko/latest.svg)](https://www.npmjs.com/package/pko)
+
 `pko` is a drop-in replacement for `npm` that uses local files instead of the standard `npm` registry for the packages
 it has been set up with. If you're wondering why you would want to do such things, refer to the [use-cases](#Use-cases)
 section of this document.

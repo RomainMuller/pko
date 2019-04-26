@@ -4,13 +4,14 @@ node_js:
 cache: npm
 before_install:
 - npm install -g npm@^6.9.0
-- npm install -g greenkeeper-lockfile
+- npm install -g coveralls greenkeeper-lockfile
 before_script:
 - greenkeeper-lockfile-update
 script:
 - npm run build
 - npm test
 after_script:
+- coveralls < coverage/lcov.info
 - greenkeeper-lockfile-upload
 deploy:
   skip_cleanup: true

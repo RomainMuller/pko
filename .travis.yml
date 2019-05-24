@@ -6,6 +6,7 @@ cache: npm
 branches:
   only:
   - master
+  - /^v\d+\.\d+\.\d+(-\S*)?$/
 
 env:
   global:

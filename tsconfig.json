@@ -3,6 +3,7 @@
         "target":"ES2017",
         "module": "commonjs",
         "lib": ["es2017"],
+        "composite": true,
         "declaration": true,
         "strict": true,
         "noImplicitAny": true,

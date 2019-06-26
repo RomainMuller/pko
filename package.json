@@ -44,7 +44,7 @@
     "@types/colors": "^1.2.1",
     "@types/fs-extra": "^7.0.0",
     "@types/jest": "^24.0.13",
-    "@types/node": "^8.10.48",
+    "@types/node": "^12.0.10",
     "@types/semver": "^6.0.0",
     "jest": "^24.8.0",
     "standard-version": "^6.0.1",

@@ -2,7 +2,6 @@
 [![Build Status](https://travis-ci.com/RomainMuller/pko.svg?branch=master)](https://travis-ci.com/RomainMuller/pko)
 [![Maintainability](https://api.codeclimate.com/v1/badges/0dd9c68d88c6d6a7c672/maintainability)](https://codeclimate.com/github/RomainMuller/pko/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/0dd9c68d88c6d6a7c672/test_coverage)](https://codeclimate.com/github/RomainMuller/pko/test_coverage)
-[![Greenkeeper](https://badges.greenkeeper.io/RomainMuller/pko.svg)](https://greenkeeper.io/)
 [![npm package](https://img.shields.io/npm/v/pko/latest.svg)](https://www.npmjs.com/package/pko)
 
 `pko` is a drop-in replacement for `npm` that uses local files instead of the standard `npm` registry for the packages

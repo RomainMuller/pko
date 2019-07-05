@@ -8,3 +8,4 @@ update_configs:
     ignored_updates:
       - match:
           dependency_name: '@types/node'
+    version_requirement_updates: increase_versions

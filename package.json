@@ -35,21 +35,21 @@
   },
   "dependencies": {
     "colors": "^1.3.3",
-    "fs-extra": "^8.0.1",
-    "semver": "^6.1.0",
+    "fs-extra": "^8.1.0",
+    "semver": "^6.2.0",
     "source-map-support": "^0.5.12",
     "verdaccio": "^4.1.0"
   },
   "devDependencies": {
     "@types/colors": "^1.2.1",
     "@types/fs-extra": "^8.0.0",
-    "@types/jest": "^24.0.13",
+    "@types/jest": "^24.0.15",
     "@types/node": "^8.10.51",
-    "@types/semver": "^6.0.0",
+    "@types/semver": "^6.0.1",
     "jest": "^24.8.0",
     "standard-version": "^6.0.1",
     "ts-jest": "^24.0.2",
-    "tslint": "^5.16.0",
+    "tslint": "^5.18.0",
     "typescript": "^3.5.3"
   },
   "greenkeeper": {

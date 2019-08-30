@@ -28,8 +28,8 @@ jobs:
           /tmp/cc-test-reporter before-build
         env:
           CC_TEST_REPORTER_ID:  ${{secrets.CC_TEST_REPORTER_ID}}
-          GIT_COMMIT_SHA:       ${{GITHUB_SHA}}
-          GIT_BRANCH:           ${{GITHUB_REF}}
+          GIT_COMMIT_SHA:       ${{github.sha}}
+          GIT_BRANCH:           ${{github.ref}}
       - name: Install Dependencies
         run: npm ci
       - name: Build
@@ -51,5 +51,5 @@ jobs:
           fi
         env:
           CC_TEST_REPORTER_ID:  ${{secrets.CC_TEST_REPORTER_ID}}
-          GIT_COMMIT_SHA:       ${{GITHUB_SHA}}
-          GIT_BRANCH:           ${{GITHUB_REF}}
+          GIT_COMMIT_SHA:       ${{github.sha}}
+          GIT_BRANCH:           ${{github.ref}}

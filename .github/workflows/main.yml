@@ -42,12 +42,12 @@ jobs:
         run: |
           if [ -f coverage/lcov.info ]; then
             /tmp/cc-test-reporter format-coverage --input-type lcov --output coverage/codeclimate.bin coverage/lcov.info
-            /tmp/cc-test-reporter upload-coverage --input coverage/codeclimate.bin
+            /tmp/cc-test-reporter upload-coverage --debug --input coverage/codeclimate.bin
           fi
           if [ ${{job.status}} = 'success' ]; then
-            /tmp/cc-test-reporter after-build --exit-code 0
+            /tmp/cc-test-reporter after-build --debug --exit-code 0
           else
-            /tmp/cc-test-reporter after-build --exit-code 255
+            /tmp/cc-test-reporter after-build --debug --exit-code 255
           fi
         env:
           CC_TEST_REPORTER_ID:  ${{secrets.CC_TEST_REPORTER_ID}}

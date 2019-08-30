@@ -33,26 +33,22 @@ jobs:
       - name: Install Dependencies
         run: npm ci
       - name: Build
-        if: success()
         run: npm run build
       - name: Test
-        if: success()
         run: |
           npm test
       - name: CodeClimate Report
-        if: success() && matrix.node-version == '8.x'
+        if: always() && matrix.node-version == '8.x'
         run: |
-          /tmp/cc-test-reporter format-coverage --input-type lcov --output coverage/codeclimate.bin coverage/lcov.info
-          /tmp/cc-test-reporter upload-coverage --input coverage/codeclimate.bin
-          /tmp/cc-test-reporter after-build --exit-code 0
-        env:
-          CC_TEST_REPORTER_ID:  ${{secrets.CC_TEST_REPORTER_ID}}
-          GIT_COMMIT_SHA:       ${GITHUB_SHA}
-          GIT_BRANCH:           ${GITHUB_REF}
-      - name: CodeClimate Report
-        if: failure() && matrix.node-version == '8.x'
-        run: |
-          /tmp/cc-test-reporter after-build --exit-code 1
+          if [ -f coverage/lcov.info ]; then
+            /tmp/cc-test-reporter format-coverage --input-type lcov --output coverage/codeclimate.bin coverage/lcov.info
+            /tmp/cc-test-reporter upload-coverage --input coverage/codeclimate.bin
+          fi
+          if [ ${{job.status}} = 'success' ]; then
+            /tmp/cc-test-reporter after-build --exit-code 0
+          else
+            /tmp/cc-test-reporter after-build --exit-code 255
+          fi
         env:
           CC_TEST_REPORTER_ID:  ${{secrets.CC_TEST_REPORTER_ID}}
           GIT_COMMIT_SHA:       ${GITHUB_SHA}

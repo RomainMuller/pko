@@ -21,9 +21,11 @@ jobs:
         with:
           version: ${{matrix.node-version}}
       - name: Set up CodeClimate
+        if: ${{matrix.node-version}} == '8.x'
         run: |
           curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 -o /tmp/cc-test-reporter
           chmod +x /tmp/cc-test-reporter
+          /tmp/cc-test-reporter before-build --id ${{ secrets.CC_TEST_REPORTER_ID }}
         env:
           CC_TEST_REPORTER_ID:  ${{ secrets.CC_TEST_REPORTER_ID }}
           GIT_COMMIT_SHA:       ${GITHUB_SHA}
@@ -36,19 +38,18 @@ jobs:
       - name: Test
         if: success()
         run: |
-          /tmp/cc-test-reporter before-build --id ${{ secrets.CC_TEST_REPORTER_ID }}
           npm test
-          /tmp/cc-test-reporter format-coverage --input-type lcov --output coverage/codeclimate.bin coverage/lcov.info
       - name: CodeClimate Report
-        if: success()
+        if: success() && ${{matrix.node-version}} == '8.x'
         run: |
+          /tmp/cc-test-reporter format-coverage --input-type lcov --output coverage/codeclimate.bin coverage/lcov.info
           /tmp/cc-test-reporter upload-coverage --id ${{ secrets.CC_TEST_REPORTER_ID }} --input coverage/codeclimate.bin
           /tmp/cc-test-reporter after-build --id ${{ secrets.CC_TEST_REPORTER_ID }} --exit-code 0
         env:
           GIT_COMMIT_SHA:       ${GITHUB_SHA}
           GIT_BRANCH:           ${GITHUB_REF}
       - name: CodeClimate Report
-        if: failure()
+        if: failure() && ${{matrix.node-version}} == '8.x'
         run: |
           /tmp/cc-test-reporter after-build --id ${{ secrets.CC_TEST_REPORTER_ID }} --exit-code 1
         env:

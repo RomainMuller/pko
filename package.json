@@ -37,7 +37,7 @@
     "colors": "^1.4.0",
     "fs-extra": "^8.1.0",
     "semver": "^6.3.0",
-    "source-map-support": "^0.5.15",
+    "source-map-support": "^0.5.16",
     "verdaccio": "^4.3.4"
   },
   "devDependencies": {

@@ -6,5 +6,8 @@
 # Don't package dot-files
 .*
 
+# Don't package yarn lock
+yarn.lock
+
 # Don't package coverage data
 /coverage

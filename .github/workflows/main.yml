@@ -23,7 +23,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@master
         with:
-          version: ${{matrix.node-version}}
+          node-version: ${{matrix.node-version}}
       - name: Set up CodeClimate
         if: matrix.node-version == '8.x'
         run: |

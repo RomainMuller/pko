@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [10.x, 12.x]
 
     steps:
       - name: Checkout code
@@ -25,7 +25,7 @@ jobs:
         with:
           node-version: ${{matrix.node-version}}
       - name: Set up CodeClimate
-        if: matrix.node-version == '8.x'
+        if: matrix.node-version == '10.x'
         run: |
           curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 -o /tmp/cc-test-reporter
           chmod +x /tmp/cc-test-reporter
@@ -35,14 +35,13 @@ jobs:
           CC_TEST_REPORTER_ID:  ${{secrets.CC_TEST_REPORTER_ID}}
           GIT_BRANCH:           ${{github.head_ref}}
       - name: Install Dependencies
-        run: npm ci
+        run: yarn install --frozen-lockfile
       - name: Build
-        run: npm run build
+        run: yarn build
       - name: Test
-        run: |
-          npm test
+        run: yarn test
       - name: CodeClimate Report
-        if: always() && matrix.node-version == '8.x'
+        if: always() && matrix.node-version == '10.x'
         run: |
           export GIT_COMMIT_SHA=$(git rev-parse HEAD)
           if [ -f coverage/lcov.info ]; then

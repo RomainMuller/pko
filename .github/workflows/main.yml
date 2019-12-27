@@ -20,10 +20,23 @@ jobs:
         uses: actions/checkout@master
         with:
           ref: ${{github.head_ref}}
+
       - name: Set up Node
         uses: actions/setup-node@master
         with:
           node-version: ${{matrix.node-version}}
+
+      - name: Locate Yarn cache
+        id: yarn-cache
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - name: Restore Yarn cache
+        uses: actions/cache@v1
+        with:
+          path: ${{ steps.yarn-cache.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |-
+            ${{ runner.os }}-yarn-
+
       - name: Set up CodeClimate
         if: matrix.node-version == '10.x'
         run: |
@@ -34,12 +47,14 @@ jobs:
         env:
           CC_TEST_REPORTER_ID:  ${{secrets.CC_TEST_REPORTER_ID}}
           GIT_BRANCH:           ${{github.head_ref}}
+
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
       - name: Build
         run: yarn build
       - name: Test
         run: yarn test
+
       - name: CodeClimate Report
         if: always() && matrix.node-version == '10.x'
         run: |

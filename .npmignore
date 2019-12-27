@@ -11,6 +11,7 @@ yarn.lock
 
 # Don't package typescript configuration
 tsconfig.json
+tslint.yaml
 
 # Don't package coverage data
 /coverage

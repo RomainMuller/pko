@@ -9,5 +9,8 @@
 # Don't package yarn lock
 yarn.lock
 
+# Don't package typescript configuration
+tsconfig.json
+
 # Don't package coverage data
 /coverage

@@ -50,7 +50,7 @@
     "standard-version": "^7.0.0",
     "ts-jest": "^24.2.0",
     "tslint": "^5.20.1",
-    "typescript": "~3.7.4"
+    "typescript": "~3.7.5"
   },
   "greenkeeper": {
     "ignore": [

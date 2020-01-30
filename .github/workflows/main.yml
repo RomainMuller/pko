@@ -59,13 +59,25 @@ jobs:
         if: always() && matrix.node-version == '10.x'
         run: |
           export GIT_COMMIT_SHA=$(git rev-parse HEAD)
-          if [ -f coverage/lcov.info ]; then
-            /tmp/cc-test-reporter format-coverage --input-type lcov --output coverage/codeclimate.bin coverage/lcov.info
-            /tmp/cc-test-reporter upload-coverage --input coverage/codeclimate.bin
-          fi
           if [ '${{job.status}}' = 'Success' ]; then
-            /tmp/cc-test-reporter after-build
+            /tmp/cc-test-reporter after-build -t lcov
+          else
+            /tmp/cc-test-reporter after-build -t lcov --exit-code 1
           fi
         env:
           CC_TEST_REPORTER_ID:  ${{secrets.CC_TEST_REPORTER_ID}}
           GIT_BRANCH:           ${{github.head_ref}}
+
+
+  approve-dependabot:
+    name: Approve Dependabot
+    runs-on: ubuntu-latest
+    needs: [build-and-test]
+
+    if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
+
+    steps:
+      - name: Approve Pull Request
+        uses: hmarr/auto-approve-action@7782c7e2bdf62b4d79bdcded8332808fd2f179cd
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}

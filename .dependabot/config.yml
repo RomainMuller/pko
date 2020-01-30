@@ -5,8 +5,11 @@ update_configs:
   - package_manager: javascript
     directory: /
     update_schedule: live
-    ignored_updates:
+    version_requirement_updates: increase_versions
+    automerged_updates:
       - match:
           dependency_name: '@types/node'
-          version_requirement: '>= 9'
-    version_requirement_updates: increase_versions
+          update_type: 'semver:minor'
+      - match:
+          dependency_type: all
+          update_type: all

@@ -571,10 +571,10 @@
     http-errors "1.7.3"
     http-status-codes "1.4.0"
 
-"@verdaccio/commons-api@^9.0.0":
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/@verdaccio/commons-api/-/commons-api-9.0.0.tgz#d13d73e3d784fb2292965015176bd7f870583cb1"
-  integrity sha512-rX4ABMh80dXyWRo8gEppiyA04siVAGzmhCG+vvVu7fGN6hn3XU1pR4xYeKWMDq4ofWpyI777uMftcYzbZc9AtA==
+"@verdaccio/commons-api@^9.3.1":
+  version "9.3.1"
+  resolved "https://registry.yarnpkg.com/@verdaccio/commons-api/-/commons-api-9.3.1.tgz#64816272b878f4f65ef6378c891f7c7f4022bbd5"
+  integrity sha512-EuBx5yYFJeOm8ryXhHEr4jsV6IySxVdItkVFQccuDc4qmLGUfNLqg1lOCtJKGu0uMvZE/m4UaUQSmvAvkizHmQ==
   dependencies:
     http-errors "1.7.3"
     http-status-codes "1.4.0"
@@ -586,21 +586,21 @@
   dependencies:
     lockfile "1.0.4"
 
-"@verdaccio/file-locking@^9.0.0":
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/@verdaccio/file-locking/-/file-locking-9.0.0.tgz#0c29c230a7657423a9c0fbbb72bce3ba9aa3e190"
-  integrity sha512-acxyAgoLHPQwCTJVao1ZWzTDZvTDNykfoHk/lSDGX7OolaB9g741WnNHB1a9z9jj2SW3AVe5iMAs08eP2tdvVA==
+"@verdaccio/file-locking@^9.3.1":
+  version "9.3.1"
+  resolved "https://registry.yarnpkg.com/@verdaccio/file-locking/-/file-locking-9.3.1.tgz#357c3e83e0ca61c78b93c3a30846a1bc35dbb776"
+  integrity sha512-apgKGRaYzieg8KZdO5JRSGa8qcU6SobF5cvUhgRN7xHwbqWnzRXgl1JfaJqVeObf4ZV3yimdFMJ22KdZYcGepw==
   dependencies:
     lockfile "1.0.4"
 
-"@verdaccio/local-storage@^9.0.0":
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/@verdaccio/local-storage/-/local-storage-9.0.0.tgz#03e09531045de178f260355d334717e809fb3f96"
-  integrity sha512-1FYLGYigBtISDSF6euELTcUlJ5Gn4mLh4ptQ803nhCmpK5BzwBk1hrwKOrPGL0nrYLY12+pSHsMFc/HmlNv06A==
+"@verdaccio/local-storage@^9.3.0":
+  version "9.3.1"
+  resolved "https://registry.yarnpkg.com/@verdaccio/local-storage/-/local-storage-9.3.1.tgz#c378c9c9c1ef092f977e894db967c8fc16071369"
+  integrity sha512-+4SLIjeFlyopREWb9m0EUONyfcTzWx5+JP/C747vL3Jo0QrbGbqwBqne7qXFKiYNN4mf/lHuRnxb920ITCqSWw==
   dependencies:
-    "@verdaccio/commons-api" "^9.0.0"
-    "@verdaccio/file-locking" "^9.0.0"
-    "@verdaccio/streams" "^9.0.0"
+    "@verdaccio/commons-api" "^9.3.1"
+    "@verdaccio/file-locking" "^9.3.1"
+    "@verdaccio/streams" "^9.3.1"
     async "3.1.0"
     level "5.0.1"
     lodash "4.17.15"
@@ -620,10 +620,10 @@
   resolved "https://registry.yarnpkg.com/@verdaccio/streams/-/streams-8.5.2.tgz#d6f366f94b905bb945bcdfa1572fde8e09f53d7a"
   integrity sha512-Rbw+vm/KHgy5OQB+jSxxIXYvVFmG/fuFmBeH7F4fp2r5h7w1TP/mlQZI7PVlPPhLZtM6Xdrzf6H+NRCwRncwIg==
 
-"@verdaccio/streams@^9.0.0":
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/@verdaccio/streams/-/streams-9.0.0.tgz#42e48471b2acbfe6fe1264ba3230ef3545d8261e"
-  integrity sha512-lmzIuxkG4fnJzhqiDm45OmizVPm73soKSlbswSKe4hlYsHXJVdpcY4m3/bYPFDMZYi7Bd5M3yqzhLrCn2Hh82w==
+"@verdaccio/streams@^9.3.1":
+  version "9.3.1"
+  resolved "https://registry.yarnpkg.com/@verdaccio/streams/-/streams-9.3.1.tgz#4e1524382e18d3121d60c32b7d5ee39e21381430"
+  integrity sha512-AO0i8lsu3H1ss694Dtg9KbWpOlSRFNVeT5J2oscAAjQydXjOB63paxiOdUBTaavhT03T+i/AnSgWahsdSG1diA==
 
 "@verdaccio/ui-theme@^0.3.13":
   version "0.3.13"
@@ -4689,10 +4689,10 @@ semver@6.3.0, semver@^6.0.0, semver@^6.3.0:
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.0.tgz#ee0a64c8af5e8ceea67687b133761e1becbd1d3d"
   integrity sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==
 
-semver@7.1.1:
-  version "7.1.1"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-7.1.1.tgz#29104598a197d6cbe4733eeecbe968f7b43a9667"
-  integrity sha512-WfuG+fl6eh3eZ2qAf6goB7nhiCd7NPXhmyFxigB/TOkQyeLP8w8GsVehvtGNtnNmyboz4TgeK40B1Kbql/8c5A==
+semver@7.1.2:
+  version "7.1.2"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.1.2.tgz#847bae5bce68c5d08889824f02667199b70e3d87"
+  integrity sha512-BJs9T/H8sEVHbeigqzIEo57Iu/3DG6c4QoqTfbQB3BPA4zgzAomh/Fk9E7QtjWQ8mx2dgA9YCfSF4y9k9bHNpQ==
 
 semver@^7.1.1, semver@^7.1.3:
   version "7.1.3"
@@ -5478,13 +5478,13 @@ verdaccio-htpasswd@^8.5.0:
     http-errors "1.7.3"
     unix-crypt-td-js "1.1.4"
 
-verdaccio@^4.4.3:
-  version "4.4.3"
-  resolved "https://registry.yarnpkg.com/verdaccio/-/verdaccio-4.4.3.tgz#01a4197652a37ca2b3ac2e5531f564b63d6729d3"
-  integrity sha512-DiwF3mvlv6tvvYpycoqRGfjRBHrQKL5NXxHrW50wAPBmMXKxVXT3OKi0n4N+EqSOq+XE0d8skHpOSNHO8KmuRA==
+verdaccio@^4.4.4:
+  version "4.4.4"
+  resolved "https://registry.yarnpkg.com/verdaccio/-/verdaccio-4.4.4.tgz#6dfeb352d981185745ea4b117fb2567aac8d676a"
+  integrity sha512-f126ip+zj+TqXC0NufjUpi11khEtGVTSSZKtAETHooYNHwIyvqNqArziXgDKGv+CUWWhO3Xnn3mZDlfodiHvxQ==
   dependencies:
     "@verdaccio/commons-api" "^8.5.0"
-    "@verdaccio/local-storage" "^9.0.0"
+    "@verdaccio/local-storage" "^9.3.0"
     "@verdaccio/readme" "^8.5.0"
     "@verdaccio/streams" "^8.5.2"
     "@verdaccio/ui-theme" "^0.3.13"
@@ -5514,7 +5514,7 @@ verdaccio@^4.4.3:
     mv "2.1.1"
     pkginfo "0.4.1"
     request "2.87.0"
-    semver "7.1.1"
+    semver "7.1.2"
     verdaccio-audit "^8.5.0"
     verdaccio-htpasswd "^8.5.0"
 

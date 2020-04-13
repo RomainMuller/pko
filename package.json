@@ -36,7 +36,7 @@
   "dependencies": {
     "colors": "^1.4.0",
     "fs-extra": "^9.0.0",
-    "semver": "^7.2.2",
+    "semver": "^7.2.3",
     "source-map-support": "^0.5.16",
     "verdaccio": "^4.5.1"
   },

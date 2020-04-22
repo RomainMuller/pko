@@ -43,7 +43,7 @@
   "devDependencies": {
     "@types/fs-extra": "^8.1.0",
     "@types/jest": "^25.2.1",
-    "@types/node": "^10.17.20",
+    "@types/node": "^10.17.21",
     "@types/semver": "^7.1.0",
     "jest": "^25.4.0",
     "standard-version": "^7.1.0",

@@ -5585,9 +5585,9 @@ verdaccio-audit@^9.4.0:
     request "2.88.0"
 
 verdaccio-htpasswd@^9.4.0:
-  version "9.4.0"
-  resolved "https://registry.yarnpkg.com/verdaccio-htpasswd/-/verdaccio-htpasswd-9.4.0.tgz#e89aa3e1a5c74515c4d5c6528f60c31be5da7f58"
-  integrity sha512-bdoJLGod4/Q4GGY5ne6toEXFLX3JsW5JqaKTYIuox3664QyP25Hxfw/ID5qQeRUR3tBTc0xdygxPqlUvSCCIMg==
+  version "9.4.1"
+  resolved "https://registry.yarnpkg.com/verdaccio-htpasswd/-/verdaccio-htpasswd-9.4.1.tgz#44f9e57083d34c740a56654fa4210cb66bec9fc5"
+  integrity sha512-d7WkEErQWPB4xeMaWV0AQTafJoK8gFFmOiyJ+lBENN+hyLtb9tUUnqcbJYBzx/5swkisAmH4I+x7523ikq30SA==
   dependencies:
     "@verdaccio/file-locking" "^9.4.0"
     apache-md5 "1.1.2"

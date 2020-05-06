@@ -46,7 +46,7 @@
     "@types/node": "^10.17.21",
     "@types/semver": "^7.1.0",
     "jest": "^25.5.4",
-    "standard-version": "^7.1.0",
+    "standard-version": "^8.0.0",
     "ts-jest": "^25.4.0",
     "tslint": "^6.1.2",
     "typescript": "~3.8.3"

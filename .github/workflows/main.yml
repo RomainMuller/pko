@@ -56,14 +56,10 @@ jobs:
         run: yarn test
 
       - name: CodeClimate Report
-        if: always() && matrix.node-version == '10.x'
+        if: success() && matrix.node-version == '10.x'
         run: |
           export GIT_COMMIT_SHA=$(git rev-parse HEAD)
-          if [ '${{job.status}}' = 'Success' ]; then
-            /tmp/cc-test-reporter after-build -t lcov
-          else
-            /tmp/cc-test-reporter after-build -t lcov --exit-code 1
-          fi
+          /tmp/cc-test-reporter after-build -t lcov
         env:
           CC_TEST_REPORTER_ID:  ${{secrets.CC_TEST_REPORTER_ID}}
           GIT_BRANCH:           ${{github.head_ref}}

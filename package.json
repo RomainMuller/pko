@@ -41,7 +41,7 @@
     "verdaccio": "^4.6.2"
   },
   "devDependencies": {
-    "@types/fs-extra": "^8.1.1",
+    "@types/fs-extra": "^9.0.1",
     "@types/jest": "^26.0.0",
     "@types/node": "^10.17.26",
     "@types/semver": "^7.2.0",

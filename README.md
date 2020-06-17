@@ -1,5 +1,5 @@
 # `pko` - Package Overlay
-[![Build Status](https://travis-ci.com/RomainMuller/pko.svg?branch=main)](https://travis-ci.com/RomainMuller/pko)
+![Build Status](https://github.com/RomainMuller/pko/workflows/Validation%20Build/badge.svg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/0dd9c68d88c6d6a7c672/maintainability)](https://codeclimate.com/github/RomainMuller/pko/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/0dd9c68d88c6d6a7c672/test_coverage)](https://codeclimate.com/github/RomainMuller/pko/test_coverage)
 [![npm package](https://img.shields.io/npm/v/pko/latest.svg)](https://www.npmjs.com/package/pko)

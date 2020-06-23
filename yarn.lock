@@ -5715,10 +5715,10 @@ verdaccio-htpasswd@9.6.1:
     http-errors "1.7.3"
     unix-crypt-td-js "1.1.4"
 
-verdaccio@^4.7.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/verdaccio/-/verdaccio-4.7.0.tgz#f8c40d299f081f449151ab1091be00909c3f563d"
-  integrity sha512-n6cb6IXOi4KZIJK30ylElHTxb43ky9AHERm/PICydo0nlIf8r9NkA4pJQO1gC5MIf4tkvoXky9J4cOXITqyFoA==
+verdaccio@^4.7.1:
+  version "4.7.1"
+  resolved "https://registry.yarnpkg.com/verdaccio/-/verdaccio-4.7.1.tgz#22ae671124189c09dfa6f059ad3e57191405387e"
+  integrity sha512-frbxs8uRighBJ5aOt3Yc13wV1Go3B94Uu5NzmeB+WuvfSBQJOWktRhE2JzfPrx9ShRI6Ogho1FUa3th4iXjPXw==
   dependencies:
     "@verdaccio/commons-api" "9.6.1"
     "@verdaccio/local-storage" "9.6.1"

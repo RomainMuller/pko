@@ -15,3 +15,6 @@ tslint.yaml
 
 # Don't package coverage data
 /coverage
+
+# Don't package tools
+/tools

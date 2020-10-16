@@ -1,0 +1,84 @@
+{
+  "projectName": "pko",
+  "projectOwner": "RomainMuller",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "contributorsSortAlphabetically": true,
+  "skipCi": true,
+  "files": [
+    "README.md"
+  ],
+  "contributors": [
+    {
+      "login": "RomainMuller",
+      "name": "Romain Marcadier",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/411689?v=4",
+      "profile": "https://keybase.io/romainmuller",
+      "contributions": [
+        "code",
+        "bug",
+        "review",
+        "test",
+        "maintenance",
+        "ideas"
+      ]
+    },
+    {
+      "login": "eladb",
+      "name": "Elad Ben-Israel",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/598796?v=4",
+      "profile": "http://eladb.github.com/",
+      "contributions": [
+        "code",
+        "bug",
+        "review",
+        "test",
+        "maintenance",
+        "ideas"
+      ]
+    },
+    {
+      "login": "dependabot-preview[bot]",
+      "name": "dependabot-preview[bot]",
+      "avatar_url": "https://avatars3.githubusercontent.com/in/2141?v=4",
+      "profile": "https://github.com/apps/dependabot-preview",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "dependabot[bot]",
+      "name": "dependabot[bot]",
+      "avatar_url": "https://avatars0.githubusercontent.com/in/29110?v=4",
+      "profile": "https://github.com/apps/dependabot",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "greenkeeper[bot]",
+      "name": "greenkeeper[bot]",
+      "avatar_url": "https://avatars3.githubusercontent.com/in/505?v=4",
+      "profile": "https://github.com/apps/greenkeeper",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "rix0rrr",
+      "name": "Rico Huijbers",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/524162?v=4",
+      "profile": "http://rix0r.nl/",
+      "contributions": [
+        "code",
+        "bug",
+        "review",
+        "test",
+        "maintenance",
+        "ideas"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "commitConvention": "none"
+}

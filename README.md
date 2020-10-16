@@ -66,3 +66,34 @@ PKO_VERBOSE=1 pko install
 * Replacing a dependency with customized code (for quick experimentations, ...)
   > Publish your custom version under the exact same name as the package you want to replace to your overlay, and
   > `pko` will use that instead of the version found in the public `npm` registry.
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="http://eladb.github.com/"><img src="https://avatars3.githubusercontent.com/u/598796?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Elad Ben-Israel</b></sub></a><br /><a href="https://github.com/RomainMuller/pko/commits?author=eladb" title="Code">💻</a> <a href="https://github.com/RomainMuller/pko/issues?q=author%3Aeladb" title="Bug reports">🐛</a> <a href="https://github.com/RomainMuller/pko/pulls?q=is%3Apr+reviewed-by%3Aeladb" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/RomainMuller/pko/commits?author=eladb" title="Tests">⚠️</a> <a href="#maintenance-eladb" title="Maintenance">🚧</a> <a href="#ideas-eladb" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="http://rix0r.nl/"><img src="https://avatars2.githubusercontent.com/u/524162?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rico Huijbers</b></sub></a><br /><a href="https://github.com/RomainMuller/pko/commits?author=rix0rrr" title="Code">💻</a> <a href="https://github.com/RomainMuller/pko/issues?q=author%3Arix0rrr" title="Bug reports">🐛</a> <a href="https://github.com/RomainMuller/pko/pulls?q=is%3Apr+reviewed-by%3Arix0rrr" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/RomainMuller/pko/commits?author=rix0rrr" title="Tests">⚠️</a> <a href="#maintenance-rix0rrr" title="Maintenance">🚧</a> <a href="#ideas-rix0rrr" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://keybase.io/romainmuller"><img src="https://avatars2.githubusercontent.com/u/411689?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Romain Marcadier</b></sub></a><br /><a href="https://github.com/RomainMuller/pko/commits?author=RomainMuller" title="Code">💻</a> <a href="https://github.com/RomainMuller/pko/issues?q=author%3ARomainMuller" title="Bug reports">🐛</a> <a href="https://github.com/RomainMuller/pko/pulls?q=is%3Apr+reviewed-by%3ARomainMuller" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/RomainMuller/pko/commits?author=RomainMuller" title="Tests">⚠️</a> <a href="#maintenance-RomainMuller" title="Maintenance">🚧</a> <a href="#ideas-RomainMuller" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/apps/dependabot-preview"><img src="https://avatars3.githubusercontent.com/in/2141?v=4?s=100" width="100px;" alt=""/><br /><sub><b>dependabot-preview[bot]</b></sub></a><br /><a href="#maintenance-dependabot-preview[bot]" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="https://github.com/apps/dependabot"><img src="https://avatars0.githubusercontent.com/in/29110?v=4?s=100" width="100px;" alt=""/><br /><sub><b>dependabot[bot]</b></sub></a><br /><a href="#maintenance-dependabot[bot]" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="https://github.com/apps/greenkeeper"><img src="https://avatars3.githubusercontent.com/in/505?v=4?s=100" width="100px;" alt=""/><br /><sub><b>greenkeeper[bot]</b></sub></a><br /><a href="#maintenance-greenkeeper[bot]" title="Maintenance">🚧</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+## License
+
+This project is distributed under the [Apache-2.0] license.
+
+[Apache-2.0]: https://spdx.org/licenses/Apache-2.0.html

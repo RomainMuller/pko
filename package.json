@@ -40,7 +40,7 @@
     "fs-extra": "^9.0.1",
     "semver": "^7.3.2",
     "source-map-support": "^0.5.19",
-    "verdaccio": "^4.8.0"
+    "verdaccio": "^4.8.1"
   },
   "devDependencies": {
     "@types/fs-extra": "^8.1.1",

@@ -2389,10 +2389,10 @@ growly@^1.3.0:
   resolved "https://registry.yarnpkg.com/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
   integrity sha1-8QdIy+dq+WS3yWyTxrzCivEgwIE=
 
-handlebars@4.7.6, handlebars@^4.7.6:
-  version "4.7.6"
-  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.7.6.tgz#d4c05c1baf90e9945f77aa68a7a219aa4a7df74e"
-  integrity sha512-1f2BACcBfiwAfStCKZNrUCgqNZkGsAT7UM3kkYtXuLo0KnaVfjKOyf7PRzB6++aK9STyT1Pd2ZCPe3EGOXleXA==
+handlebars@4.7.7, handlebars@^4.7.6:
+  version "4.7.7"
+  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.7.7.tgz#9ce33416aad02dbd6c8fafa8240d5d98004945a1"
+  integrity sha512-aAcXm5OAfE/8IXkcZvCepKU3VzW1/39Fb5ZuqMtgI/hT8X2YgoMvBY5dLhq/cpOvw7Lk1nK/UF71aLG/ZnVYRA==
   dependencies:
     minimist "^1.2.5"
     neo-async "^2.6.0"
@@ -3693,10 +3693,15 @@ lodash.templatesettings@^4.0.0:
   dependencies:
     lodash._reinterpolate "^3.0.0"
 
-lodash@4.17.20, lodash@4.x, lodash@^4.17.13, lodash@^4.17.15:
+lodash@4.17.20:
   version "4.17.20"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
   integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
+
+lodash@4.17.21, lodash@4.x, lodash@^4.17.13, lodash@^4.17.15:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 loud-rejection@^1.0.0:
   version "1.6.0"
@@ -5664,10 +5669,10 @@ verdaccio-htpasswd@9.7.2:
     http-errors "1.8.0"
     unix-crypt-td-js "1.1.4"
 
-verdaccio@^4.11.1:
-  version "4.11.1"
-  resolved "https://registry.yarnpkg.com/verdaccio/-/verdaccio-4.11.1.tgz#da644c46bf053839fc423a072acbc26831920292"
-  integrity sha512-xlu61MWAWztdEsGM2vUbv5fUv+E4GWTZ9rTYU/uc1+X3EURMLEHDdFBZR7qe0abfB3Kj59GATNEtQNQ2KvqNDA==
+verdaccio@^4.11.2:
+  version "4.11.2"
+  resolved "https://registry.yarnpkg.com/verdaccio/-/verdaccio-4.11.2.tgz#08460fa88d6b1d2a08adfdbd534eba671f97be76"
+  integrity sha512-8GmeOmRtr0dbGTSsLAw7zrF64q880pfopXeTQHri3YHKUgl4RDkBuYjGaX1pyha7+g8mb1bGk9ZSq0QuQM4q6w==
   dependencies:
     "@verdaccio/commons-api" "9.7.1"
     "@verdaccio/local-storage" "9.7.4"
@@ -5685,12 +5690,12 @@ verdaccio@^4.11.1:
     dayjs "1.10.3"
     envinfo "7.7.3"
     express "4.17.1"
-    handlebars "4.7.6"
+    handlebars "4.7.7"
     http-errors "1.8.0"
     js-yaml "3.14.1"
     jsonwebtoken "8.5.1"
     kleur "4.1.3"
-    lodash "4.17.20"
+    lodash "4.17.21"
     lunr-mutable-indexes "2.3.2"
     marked "1.2.7"
     mime "2.5.0"

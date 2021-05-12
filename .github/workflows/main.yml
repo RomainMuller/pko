@@ -74,7 +74,7 @@ jobs:
 
     steps:
       - name: Request @dependabot auto-merge
-        uses: ahmadnassri/action-dependabot-auto-merge@v2
+        uses: ahmadnassri/action-dependabot-auto-merge@v2.4
         with:
           command: 'squash and merge'
           github-token: ${{ secrets.PRIVILEGED_GITHUB_TOKEN }}

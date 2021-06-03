@@ -9,9 +9,9 @@ updates:
       interval: daily
     ignore:
       - dependency-name: '@types/node'
-        versions: ['>=11.0.0-0']
+        versions: ['>=13.0.0-0']
     versioning-strategy: increase
-    
+
   - directory: /
     package-ecosystem: github-actions
     schedule:

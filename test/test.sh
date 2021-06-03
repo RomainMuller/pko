@@ -31,7 +31,7 @@ install_prefix=${dir}/install/usr
     mkdir -p ${install_prefix}
     cd ${install_prefix}
     # Hopping thorugh `npm pack` to avoid `npm`'s local symlinking, that would interfere with install-relative discover
-    tarball=$(npm pack --ignore-scripts ${ROOT})
+    tarball=$(npm pack ${ROOT} | tail -n 1)
     npm install --global-style --no-save ${tarball}
     ln -s node_modules/.bin bin
 )

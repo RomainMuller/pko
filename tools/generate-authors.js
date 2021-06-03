@@ -20,7 +20,7 @@ async function main(source, target) {
 }
 
 const [_, script, source, target, ...rest] = process.argv;
-if (resolve(script) === resolve(fileURLToPath(import.meta.url))) {
+if (resolve(script) === resolve(__filename)) {
   if (rest.length !== 0) {
     console.error('Too many arguments procided!');
     console.error(`Usage: ${script} <source> <target>`)

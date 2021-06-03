@@ -1,10 +1,10 @@
-import * as console from 'console';
-import { promises as fs } from 'fs';
-import { resolve } from 'path';
-import * as process from 'process';
-import { fileURLToPath } from 'url';
+const console = require('console');
+const { promises: fs } = require('fs');
+const { resolve } = require('path');
+const process = require('process');
+const { fileURLToPath } = require('url');
 
-export async function main(source, target) {
+async function main(source, target) {
   source = resolve(process.cwd(), source);
   target = resolve(process.cwd(), target);
 
@@ -27,5 +27,12 @@ if (resolve(script) === resolve(fileURLToPath(import.meta.url))) {
     process.exit(-1);
   }
 
-  await main(source, target);
+  main(source, target)
+    .then(
+      () => process.exit(0),
+      (err) => {
+        console.error(err);
+        process.exit(-1);
+      },
+    );
 }

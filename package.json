@@ -29,7 +29,7 @@
     "build": "tsc --build && tslint -p .",
     "build:watch": "tsc --build --watch",
     "lint": "tslint -p . --force",
-    "prepack": "node --harmony-top-level-await ./tools/generate-authors.mjs ./.all-contributorsrc ./AUTHORS",
+    "prepack": "node ./tools/generate-authors.js ./.all-contributorsrc ./AUTHORS",
     "postpack": "rm -rf AUTHORS",
     "release": "standard-version",
     "test": "jest && bash test/test.sh",

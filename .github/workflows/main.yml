@@ -22,7 +22,7 @@ jobs:
           ref: ${{github.head_ref}}
 
       - name: Set up Node
-        uses: actions/setup-node@v2.1.5
+        uses: actions/setup-node@v3.5.0
         with:
           node-version: ${{matrix.node-version}}
 
